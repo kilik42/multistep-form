@@ -48,12 +48,28 @@ export class FormUserDetails extends Component { // eslint-disable-line react/pr
 
                 <br/>
 
+                <RaisedButton
+                    label ="Continue"
+                    primary={true}
+                    style={styles.button}
+
+                    onClick={this.continue}
+
+                    
+                />
+
           </React.Fragment>
       </MuiThemeProvider>
     );
   }
 }
 
+
+const styles = {
+  button: {
+    margin: 15
+  }
+}
 FormUserDetails.propTypes = {
   prop: PropTypes.type.isRequired
 }
