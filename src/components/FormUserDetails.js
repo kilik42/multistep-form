@@ -24,11 +24,29 @@ export class FormUserDetails extends Component { // eslint-disable-line react/pr
               <AppBar title="Enter User Details"/>
 
               <TextField
-
                   hintText="enter your first name"
                   floatingLabelText="First Name"
                   onChange={handleChange('firstName')}
+                  defaultValue={values.firstName}
               />
+
+                <br/>
+              <TextField
+                  hintText="enter your last name"
+                  floatingLabelText="Last Name"
+                  onChange={handleChange('lastName')}
+                  defaultValue={values.lastName}
+              />
+
+                 <br/>
+              <TextField
+                  hintText="enter your email"
+                  floatingLabelText="Email"
+                  onChange={handleChange('firstName')}
+                  defaultValue={values.email}
+              />
+
+                <br/>
 
           </React.Fragment>
       </MuiThemeProvider>
