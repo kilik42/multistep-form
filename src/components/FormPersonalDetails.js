@@ -30,7 +30,7 @@ export class FormPersonalDetails extends Component { // eslint-disable-line reac
 
               <TextField
                   hintText="enter your occupation"
-                  floatingLabelText="First Name"
+                  floatingLabelText="Occupation"
                   onChange={handleChange('occupation')}
                   defaultValue={values.occupation}
               />
