@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import FormUserDetails from './FormUserDetails';
 import FormPersonalDetails from './FormPersonalDetails';
+import Confirm from './Confirms';
 
 export class UserForm extends Component { // eslint-disable-line react/prefer-stateless-function
 
@@ -64,7 +65,15 @@ handleChange = input => e =>{
 
         );
         case 3:
-          return  <h1>Confirm</h1>;
+        return (
+          <FormPersonalDetails
+              nextStep ={this.nextStep}
+              prevStep ={this.prevStep}
+              
+              values ={values}
+          />
+
+        );
         case 4:
           return  <h1>Success</h1>;
     }
