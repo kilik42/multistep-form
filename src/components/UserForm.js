@@ -66,7 +66,7 @@ handleChange = input => e =>{
         );
         case 3:
         return (
-          <FormPersonalDetails
+          <Confirm
               nextStep ={this.nextStep}
               prevStep ={this.prevStep}
 

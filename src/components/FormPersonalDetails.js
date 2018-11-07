@@ -26,7 +26,7 @@ export class FormPersonalDetails extends Component { // eslint-disable-line reac
     return (
       <MuiThemeProvider>
           <React.Fragment>
-              <AppBar title="Enter Your First Name"/>
+              <AppBar title="Enter Personal Details"/>
 
               <TextField
                   hintText="enter your occupation"
