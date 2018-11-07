@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import FormUserDetails from './FormUserDetails';
 import FormPersonalDetails from './FormPersonalDetails';
 import Confirm from './Confirm';
+import Success from './Success';
 
 export class UserForm extends Component { // eslint-disable-line react/prefer-stateless-function
 
@@ -13,29 +14,29 @@ state = {
   occupations: '',
   city: '',
   bio:''
-}
+};
 
 //proceed to the next step
 nextStep = ()=>{
   const {step} = this.state;
   this.setState({
     step: step + 1
-  })
-}
+  });
+};
 
 // go back to previous step
 prevStep =()=>{
   const {step} = this.step;
   this.setState({
     step: step - 1
-  })
-}
+  });
+};
 
 //handle fields change
 handleChange = input => e =>{
   this.setState({[input]: e.target.value});
 
-}
+};
 
 
 
@@ -75,7 +76,7 @@ handleChange = input => e =>{
 
         );
         case 4:
-          return  <h1>Success</h1>;
+          return  <Success />
     }
   }
 }
