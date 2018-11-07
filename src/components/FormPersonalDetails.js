@@ -14,7 +14,12 @@ export class FormPersonalDetails extends Component { // eslint-disable-line reac
     e.preventDefault();
     this.props.nextStep();
 
-  }
+  };
+
+  back = e => {
+    e.preventDefault();
+    this.props.prevStep();
+  };
   render() {
     const {values, handleChange} = this.props;
 

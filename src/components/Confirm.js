@@ -16,50 +16,68 @@ export class FormUserDetails extends Component { // eslint-disable-line react/pr
 
     this.props.nextStep();
 
-  }
+  };
+  back = e => {
+    e.preventDefault();
+    this.props.prevStep();
+  };
+  
   render() {
     const {values: {firstName, lastName, emaii, occupation, city, bio}} = this.props;
 
     return (
       <MuiThemeProvider>
           <React.Fragment>
-              <AppBar title="Enter User Details"/>
+              <AppBar title="Confirm User Data"/>
 
-              <TextField
-                  hintText="enter your first name"
-                  floatingLabelText="First Name"
-                  onChange={handleChange('firstName')}
-                  defaultValue={values.firstName}
+            <List>
+              <ListItem
+              primaryText="First Name"
+              secondaryText={ firstName}
+
+              />
+              <ListItem
+              primaryText="last Name"
+              secondaryText={ lastName}
+
               />
 
-                <br/>
-              <TextField
-                  hintText="enter your last name"
-                  floatingLabelText="Last Name"
-                  onChange={handleChange('lastName')}
-                  defaultValue={values.lastName}
-              />
+              <ListItem
+              primaryText="email"
+              secondaryText={ email}
 
-                 <br/>
-              <TextField
-                  hintText="enter your email"
-                  floatingLabelText="Email"
-                  onChange={handleChange('firstName')}
-                  defaultValue={values.email}
               />
+              <ListItem
+              primaryText="occupation"
+              secondaryText={ occupations}
 
-                <br/>
+              />
+              <ListItem
+              primaryText="city"
+              secondaryText={ city}
+
+              />
+              <ListItem
+              primaryText="bio"
+              secondaryText={ bio}
+
+              />
+            </List>
 
                 <RaisedButton
-                    label ="Continue"
+                    label ="Confirm & Continue"
                     primary={true}
                     style={styles.button}
 
                     onClick={this.continue}
-
-
                 />
 
+                <RaisedButton
+                    label ="Back"
+                    primary={false}
+                    style={styles.button}
+                    onClick={this.back}
+                />
           </React.Fragment>
       </MuiThemeProvider>
     );
