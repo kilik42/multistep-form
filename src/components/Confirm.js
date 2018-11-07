@@ -21,9 +21,9 @@ export class FormUserDetails extends Component { // eslint-disable-line react/pr
     e.preventDefault();
     this.props.prevStep();
   };
-  
+
   render() {
-    const {values: {firstName, lastName, emaii, occupation, city, bio}} = this.props;
+    const {values: {firstName, lastName, email, occupation, city, bio}} = this.props;
 
     return (
       <MuiThemeProvider>
@@ -49,7 +49,7 @@ export class FormUserDetails extends Component { // eslint-disable-line react/pr
               />
               <ListItem
               primaryText="occupation"
-              secondaryText={ occupations}
+              secondaryText={ occupation}
 
               />
               <ListItem
@@ -90,8 +90,6 @@ const styles = {
     margin: 15
   }
 }
-FormUserDetails.propTypes = {
-  prop: PropTypes.type.isRequired
-}
+
 
 export default FormUserDetails;

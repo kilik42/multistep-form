@@ -5,7 +5,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import AppBar from 'material-ui/AppBar';
 import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
-
+import FormUserDetails from './FormUserDetails';
 /**
  * FormUserDetails
  */
@@ -87,8 +87,6 @@ const styles = {
     margin: 15
   }
 }
-FormUserDetails.propTypes = {
-  prop: PropTypes.type.isRequired
-}
+
 
 export default FormPersonalDetails;

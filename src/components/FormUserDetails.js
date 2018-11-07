@@ -55,7 +55,7 @@ export class FormUserDetails extends Component { // eslint-disable-line react/pr
 
                     onClick={this.continue}
 
-                    
+
                 />
 
           </React.Fragment>
@@ -70,8 +70,6 @@ const styles = {
     margin: 15
   }
 }
-FormUserDetails.propTypes = {
-  prop: PropTypes.type.isRequired
-}
+
 
 export default FormUserDetails;
